@@ -8,11 +8,11 @@ function mouse(e) {
         box.style.top = `${e.clientY - offsety}px`;
     }
     function mousestop(e) {
-        document.body.removeEventListener("mousemove", mousemove)
-        document.body.removeEventListener("mouseup", mousestop)
+        document.body.removeEventListener("mouseclick", mousemove)
+        document.body.removeEventListener("mouseleave", mousestop)
     }
 
-    document.body.addEventListener("mousemove", mousemove)
-    document.body.addEventListener("mouseup", mousestop)
+    document.body.addEventListener("mouseclick", mousemove)
+    document.body.addEventListener("mouseleave", mousestop)
 
 }
